@@ -1,0 +1,113 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    min-height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.picture {
+    position: relative;
+    width: 300px;
+    height: 380px;
+    border-radius: 20px;
+    overflow: hidden;
+    color: white;
+    user-select: none;
+}
+
+.main-image {
+    position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+
+}
+
+.picture:hover{
+    box-shadow: 0 10px 30px rgba(0, 0,0,0.65);
+    transition: box-shadow  0.3s;
+    
+}
+
+
+.picture-overlay {
+    position:absolute;
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+    background:linear-gradient(0deg, rgba(211, 209, 209, 0.55) 0%);
+
+}
+
+.save-button{
+    position: absolute;
+    color: white;
+    width: 40px;
+    height: 25px;
+    background-color: #E60022;
+    cursor:pointer;
+    border-radius: 45%;
+    font-size: large;
+    padding: 15px;
+    right: 25px;
+    top: 25px;
+    opacity:0;
+   
+}
+
+.picture::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgb(110, 110, 110);
+    opacity: 0;
+    z-index: 2;
+  }
+
+
+.picture:hover::before {
+    opacity: 0.1;
+  }
+
+  .icons {
+    position: absolute;
+    z-index: 3;
+    bottom: 20px;
+    left: 20px;
+    opacity:0;
+  }
+  .icons div {
+    background-color: white;
+    opacity: 1;
+    color: rgb(5, 5, 5);
+    padding: 10px 15px;
+    display: inline-block;
+    border-radius: 30px;
+    font-weight: 750;
+    margin-right:4px;
+   
+  }
+  
+  .picture:hover .save-button {
+    opacity: 1;
+  }
+  .picture:hover .icons {
+    opacity: 1;
+  }
+  
+ 
+
+  
+    
+
+
+
+ 
